@@ -20,6 +20,7 @@ if(isset($_POST['Register'])){
     $query -> bindParam(':ptitle', $ititle);
     $query -> execute();
     echo "Successfully Added";
+    header("Location:login.php");
 }
 ?>
 

@@ -20,6 +20,7 @@ if(isset($_POST['Register'])){
     $query -> bindParam(':prole', $irole);
     $query -> execute();
     echo "Successfully Added";
+    header("Location:login.php");
 }
 ?>
 
@@ -52,6 +53,7 @@ if(isset($_POST['Register'])){
         }
         label{
             float: right;
+            color: white;
         }
         .draw-border {
   box-shadow: inset 0 0 0 4px white;

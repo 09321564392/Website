@@ -13,6 +13,7 @@ if(isset($_POST['Register'])){
     $query -> bindParam(':Recommendations', $irecom);
     $query -> execute();
     echo "Successfully Added";
+    header("Location:login.php");
 }
 ?>
 

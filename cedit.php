@@ -45,7 +45,7 @@ if(isset($_POST['update']))
 		// $query->execute(array(':id' => $id, ':verse1' => $iverse1, ':chorus' => $ichorus, ':verse2' => $iverse2, ':title' => $ititle));
 				
 		//redirectig to the display page. In our case, it is index.php
-		header("Location: index.php");
+		header("Location:login.php");
 	}
 }
 ?>
