@@ -54,26 +54,77 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
 <head>	
 	<title>Edit Data</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style type="text/css">
+	body{
+		background-image: url("gt.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	}
+	.draw-border {
+  box-shadow: inset 0 0 0 4px white;
+  color: gray;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border:hover {
+  color: white;
+}
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  margin: 10px;
+}
+*{
+	color: white;
+}
+</style>
 <body>
-	<a href="index.php">Home</a>
+	<a class="btn draw-border" href="index.php">Home</a>
 	<br/><br/>
 	
 	<form name="form1" method="post" action="edit.php">
-		<table border="0">
-			<tr> 
-				<td>Nick name</td>
-				<td><input type="text" name="nickname" value="<?php echo $inickname;?>"></td>
-			</tr>
-			<tr> 
-				<td>Role</td>
-				<td><input type="text" name="role" value="<?php echo $irole;?>"></td>
-			</tr>
-			<tr>
-				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" name="update" value="Update"></td>
-			</tr>
-		</table>
+
+		<div class="containter">
+			<div class="row">
+				<div class="col-sm-5"></div>
+				<div class="col-sm-1">
+					<td class="float">Nickname</td>
+				</div>
+				<div class="col-sm-6">.
+					<input type="text" name="nickname" value="<?php echo $inickname;?>">
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-5"></div>
+				<div class="col-sm-1">
+					<td class="float">Role</td>
+				</div>
+				<div class="col-sm-6">.
+					<td><input type="text" name="role" value="<?php echo $irole;?>"></td>
+				</div>
+			</div>
+
+			<br><br>
+
+			<div class="row">
+				<div align="center" class="col-sm-12">
+					<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+				<td><input class="btn draw-border" type="submit" name="update" value="Update"></td>
+				</div>
+			</div>
+
+		</div>
+
 	</form>
 </body>
 </html>
