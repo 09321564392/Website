@@ -172,7 +172,7 @@ else{
                          <label class="text">Username</label>
                     </div>
                     <div class="col-sm-9">
-                        <input placeholder="Username" type="text" name="username">
+                        <input placeholder="Username" type="text" name="username" required>
                     </div>
                     </div>      
                 </div>
@@ -188,7 +188,7 @@ else{
                           <label class="text">Password</label>
                     </div>
                     <div class="col-sm-9">
-                       <input placeholder="Password" type="password" name="password">
+                       <input placeholder="Password" type="password" name="password" required>
                     </div>
                     </div>      
                 </div>
